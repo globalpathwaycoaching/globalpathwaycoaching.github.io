@@ -4,76 +4,119 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Global Pathway Coaching</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
 
 body{
 margin:0;
-font-family:'Inter',sans-serif;
-background:#f9fafc;
-color:#0E1A2B;
-line-height:1.6;
+font-family:'Inter', sans-serif;
+background:#f4f6f9;
+color:#1c2b39;
 }
 
 header{
-background:#0E1A2B;
+background:#0e1a2b;
 color:white;
-padding:40px 20px;
+padding:20px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h1{
+font-family:'Playfair Display', serif;
+font-size:22px;
+letter-spacing:1px;
+margin:0;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
+}
+
+.hero{
+padding:100px 20px;
 text-align:center;
+background:linear-gradient(rgba(14,26,43,0.85), rgba(14,26,43,0.85)),
+url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1");
+background-size:cover;
+background-position:center;
+color:white;
 }
 
-section{
-padding:60px 20px;
-max-width:1000px;
-margin:auto;
-}
-
-h1,h2{
+.hero h2{
+font-size:42px;
+font-family:'Playfair Display', serif;
 margin-bottom:20px;
 }
 
-ul{
-padding-left:20px;
+.hero p{
+max-width:600px;
+margin:auto;
+font-size:18px;
+opacity:0.9;
 }
 
-.cta{
-background:#0E1A2B;
-color:white;
-padding:14px 28px;
-display:inline-block;
-margin-top:20px;
-text-decoration:none;
-border-radius:6px;
+.section{
+padding:80px 20px;
+max-width:1100px;
+margin:auto;
 }
 
-.form-box{
+.section h3{
+text-align:center;
+font-size:30px;
+margin-bottom:50px;
+font-family:'Playfair Display', serif;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
 background:white;
 padding:30px;
-border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
+border-radius:8px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+text-align:center;
 }
 
-input, select, textarea{
-width:100%;
-padding:12px;
-margin-bottom:15px;
-border:1px solid #ccc;
-border-radius:6px;
+.coach{
+background:white;
+padding:30px;
+border-radius:8px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+text-align:center;
 }
 
-button{
-background:#0E1A2B;
+.coach img{
+width:150px;
+height:150px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:20px;
+}
+
+.button{
+display:inline-block;
+margin-top:30px;
+padding:12px 28px;
+background:#0e1a2b;
 color:white;
-padding:14px;
-border:none;
-width:100%;
-border-radius:6px;
-font-size:16px;
-cursor:pointer;
+text-decoration:none;
+border-radius:4px;
 }
 
 footer{
-background:#0E1A2B;
+background:#0e1a2b;
 color:white;
 text-align:center;
 padding:30px;
@@ -87,73 +130,72 @@ margin-top:60px;
 
 <header>
 <h1>Global Pathway Coaching</h1>
-<p>12 Haftalık Stratejik Yurt Dışı Üniversite Mentörlük Programı</p>
+<nav>
+<a href="#vizyon">Vizyon</a>
+<a href="#surec">Süreç</a>
+<a href="#koclar">Koçlar</a>
+<a href="#iletisim">İletişim</a>
+</nav>
 </header>
 
-<section>
-<h2>Hakkımızda</h2>
-<p>Global Pathway Coaching, Hollanda, İngiltere, Kanada ve İtalya üniversite başvuru süreçlerinde yapılandırılmış ve sistemli mentörlük sunar. Amacımız öğrencinin yalnızca akademik gelişimine odaklanmasını sağlamak ve süreci profesyonel şekilde yönetmektir.</p>
+<section class="hero">
+<h2>Uluslararası Üniversite Yolculuğunuzda Akademik Rehberlik</h2>
+<p>Öğrencinin sadece çalışmaya odaklanacağı, stratejik ve sistemli bir başvuru süreci sunuyoruz.</p>
+<a href="#iletisim" class="button">Ön Görüşme Planla</a>
 </section>
 
-<section>
-<h2>Vizyonumuz</h2>
-<p>Belirsizliği ortadan kaldırmak, başvuru sürecini sistemli hale getirmek ve ailelere şeffaf ilerleme sunmak.</p>
+<section class="section" id="vizyon">
+<h3>Vizyonumuz</h3>
+<p style="text-align:center; max-width:800px; margin:auto;">
+Global Pathway Coaching olarak öğrencinin tüm başvuru sürecini profesyonel bir yol haritası ile yönetiyoruz.
+Amacımız belirsizliği ortadan kaldırmak ve öğrencinin %100 doğru strateji ile ilerlediğinden emin olmasını sağlamaktır.
+</p>
 </section>
 
-<section>
-<h2>Program İçeriği</h2>
-<ul>
-<li>Veli ön görüşmesi</li>
-<li>Ülke & üniversite yol haritası</li>
-<li>Üniversite gereklilik analizi</li>
-<li>Son başvuru tarihleri takibi</li>
-<li>Haftalık 45 dk birebir mentörlük</li>
-<li>SAT & IELTS stratejik planlama</li>
-<li>Extracurricular ve proje fikirleri</li>
-<li>Aylık veli ilerleme raporu</li>
-</ul>
-<p><strong>Program Süresi:</strong> 12 Hafta</p>
-<p><strong>Program Ücreti:</strong> 20.000 TL</p>
-</section>
-
-<section>
-<h2>Hemen Ön Görüşme Ayarla</h2>
-
-<div class="form-box">
-<form action="https://formsubmit.co/internationalstrategy@globalpathwaycoaching.com" method="POST">
-
-<input type="hidden" name="_captcha" value="false">
-
-<input type="text" name="Ad Soyad" placeholder="Ad Soyad" required>
-<input type="email" name="Email" placeholder="E-posta" required>
-<input type="text" name="Telefon" placeholder="Telefon Numarası" required>
-
-<select name="Hedef Ülke" required>
-<option value="">Hedef Ülke Seçiniz</option>
-<option>Hollanda</option>
-<option>İngiltere</option>
-<option>Kanada</option>
-<option>İtalya</option>
-</select>
-
-<textarea name="Mesaj" placeholder="Kısaca hedefinizi yazabilirsiniz"></textarea>
-
-<button type="submit">Ön Görüşme Talebi Gönder</button>
-
-</form>
+<section class="section" id="surec">
+<h3>Başvuru Süreci</h3>
+<div class="cards">
+<div class="card">
+<h4>Ülke & Üniversite Stratejisi</h4>
+<p>Hollanda, İngiltere, Kanada ve İtalya için doğru konumlandırma.</p>
 </div>
-
+<div class="card">
+<h4>Sınav & Akademik Plan</h4>
+<p>SAT / IELTS kaynak planlaması ve haftalık takip sistemi.</p>
+</div>
+<div class="card">
+<h4>Proje & CV Gelişimi</h4>
+<p>Extracurricular planlama ve akademik profil güçlendirme.</p>
+</div>
+</div>
 </section>
 
-<section>
-<h2>İletişim</h2>
-<p><strong>E-posta:</strong> internationalstrategy@globalpathwaycoaching.com</p>
-<p><strong>Telefon:</strong> +90 5XX XXX XX XX</p>
-<p><strong>LinkedIn:</strong> https://linkedin.com/in/yourprofile</p>
+<section class="section" id="koclar">
+<h3>Koçlarımız</h3>
+<div class="cards">
+<div class="coach">
+<img src="profil1.jpg" alt="Koç">
+<h4>İsim Soyisim</h4>
+<p>Hollanda, İngiltere & Kanada Süreci</p>
+</div>
+<div class="coach">
+<img src="profil2.jpg" alt="Koç">
+<h4>İsim Soyisim</h4>
+<p>İtalya Süreci</p>
+</div>
+</div>
+</section>
+
+<section class="section" id="iletisim">
+<h3>İletişim</h3>
+<p style="text-align:center;">
+info@globalpathwaycoaching.com<br>
++90 5XX XXX XX XX
+</p>
 </section>
 
 <footer>
-© 2026 Global Pathway Coaching
+© 2026 Global Pathway Coaching | Tüm Hakları Saklıdır
 </footer>
 
 </body>
