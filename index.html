@@ -10,34 +10,34 @@
 <style>
 
 :root{
---primary:#0f1c2e;
---accent:#2c5aa0;
---soft:#e9eef5;
+--primary:#0e1a2b;
+--accent:#3b82f6;
+--light:#f8fafc;
 --text:#1c2b39;
 }
 
 body{
 margin:0;
-font-family:'Inter',sans-serif;
-background:linear-gradient(to bottom,#f7f9fc,#eef2f7);
+font-family:'Inter', sans-serif;
+background:linear-gradient(180deg,#f8fbff,#eef3f9);
 color:var(--text);
 }
 
 header{
-background:rgba(15,28,46,0.95);
-backdrop-filter:blur(6px);
+background:linear-gradient(90deg,#0e1a2b,#16263c);
 color:white;
-padding:20px 8%;
+padding:22px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
 position:sticky;
 top:0;
 z-index:1000;
+box-shadow:0 4px 20px rgba(0,0,0,0.1);
 }
 
 header h1{
-font-family:'Playfair Display',serif;
+font-family:'Playfair Display', serif;
 font-size:22px;
 letter-spacing:1px;
 margin:0;
@@ -54,13 +54,12 @@ transition:0.3s;
 
 nav a:hover{
 opacity:1;
-border-bottom:1px solid var(--accent);
 }
 
 .hero{
-padding:140px 20px;
+padding:160px 20px 180px 20px;
 text-align:center;
-background:linear-gradient(rgba(15,28,46,0.85), rgba(15,28,46,0.85)),
+background:linear-gradient(rgba(14,26,43,0.85), rgba(14,26,43,0.85)),
 url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1");
 background-size:cover;
 background-position:center;
@@ -68,8 +67,8 @@ color:white;
 }
 
 .hero h2{
-font-size:48px;
-font-family:'Playfair Display',serif;
+font-size:50px;
+font-family:'Playfair Display', serif;
 margin-bottom:25px;
 max-width:900px;
 margin-left:auto;
@@ -85,85 +84,97 @@ opacity:0.9;
 
 .button{
 display:inline-block;
-margin-top:40px;
-padding:14px 32px;
+margin-top:45px;
+padding:16px 36px;
 background:var(--accent);
 color:white;
 text-decoration:none;
-border-radius:30px;
+border-radius:50px;
 font-weight:500;
 transition:0.3s;
-box-shadow:0 10px 25px rgba(44,90,160,0.3);
+box-shadow:0 12px 30px rgba(59,130,246,0.4);
 }
 
 .button:hover{
-transform:translateY(-3px);
+transform:translateY(-4px);
 }
 
 .section{
-padding:100px 8%;
+padding:120px 8%;
 max-width:1100px;
 margin:auto;
 }
 
 .section h3{
 text-align:center;
-font-size:34px;
-margin-bottom:60px;
-font-family:'Playfair Display',serif;
+font-size:36px;
+margin-bottom:70px;
+font-family:'Playfair Display', serif;
 color:var(--primary);
 }
 
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:40px;
+gap:50px;
 }
 
 .card{
 background:white;
-padding:40px;
-border-radius:14px;
-box-shadow:0 15px 40px rgba(0,0,0,0.05);
-text-align:left;
+padding:45px;
+border-radius:20px;
+box-shadow:0 25px 50px rgba(0,0,0,0.08);
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-8px);
 }
 
 .card h4{
-margin-bottom:18px;
+margin-bottom:20px;
 color:var(--accent);
 font-size:20px;
 }
 
 .coach{
 background:white;
-padding:40px;
-border-radius:14px;
-box-shadow:0 15px 40px rgba(0,0,0,0.05);
+padding:45px;
+border-radius:20px;
+box-shadow:0 25px 50px rgba(0,0,0,0.08);
 text-align:center;
 transition:0.3s;
 }
 
 .coach:hover{
-transform:translateY(-5px);
+transform:translateY(-8px);
 }
 
 .coach img{
-width:160px;
-height:160px;
+width:170px;
+height:170px;
 border-radius:50%;
 object-fit:cover;
-margin-bottom:20px;
-border:4px solid var(--accent);
+margin-bottom:25px;
+border:5px solid var(--accent);
+}
+
+#vizyon{
+background:white;
+border-radius:30px;
+box-shadow:0 25px 60px rgba(0,0,0,0.05);
+padding:80px;
 }
 
 #vizyon p{
-line-height:1.9;
+line-height:2;
 font-size:17px;
+margin-bottom:25px;
+}
+
+#vizyon ul{
+margin:20px 0 30px 20px;
+line-height:2;
 }
 
 #iletisim{
@@ -175,11 +186,11 @@ font-size:18px;
 }
 
 footer{
-background:var(--primary);
+background:linear-gradient(90deg,#0e1a2b,#16263c);
 color:white;
 text-align:center;
-padding:40px;
-margin-top:80px;
+padding:50px;
+margin-top:100px;
 font-size:14px;
 }
 
@@ -188,7 +199,10 @@ font-size:14px;
 font-size:34px;
 }
 .section{
-padding:70px 6%;
+padding:80px 6%;
+}
+#vizyon{
+padding:40px 20px;
 }
 }
 
@@ -208,16 +222,55 @@ padding:70px 6%;
 </header>
 
 <section class="hero">
-<h2>Yurt Dışında Üniversite Yolculuğunuzda Stratejik Akademik Rehberlik</h2>
-<p>Her adımı planlanmış, takip edilen ve ölçülen bir başvuru süreci.</p>
+<h2>Yurt Dışında Üniversite Yolculuğunuzda Akademik Rehberlik</h2>
+<p>Her adımı planlanmış, takip edilen ve ölçülen bir başvuru süreci. </p>
 <a href="#iletisim" class="button">Ön Görüşme Planla</a>
 </section>
 
 <section class="section" id="vizyon">
 <h3>Vizyonumuz</h3>
+
 <p>
-Global Pathway Coaching’in vizyonu, yurt dışı üniversite başvuru sürecini bireysel çabayla ilerlemeye çalışan öğrenciler için yapılandırılmış, sistemli ve stratejik bir modele dönüştürmektir...
+Global Pathway Coaching’in vizyonu, yurt dışı üniversite başvuru sürecini bireysel çabayla ilerlemeye çalışan öğrenciler için yapılandırılmış, sistemli ve stratejik bir modele dönüştürmektir.
 </p>
+
+<p>
+Türkiye’de pek çok başarılı öğrenci akademik olarak güçlü olmasına rağmen, yurt dışı başvuru sürecinin takvimsel, stratejik ve yapısal boyutlarına dair yeterli yönlendirmeye erişememektedir. Son başvuru tarihleri, sınav planlamaları, yarışmalar, proje zamanlamaları, platform gereklilikleri ve ülke bazlı farklılıklar çoğu zaman öğrencinin kendi araştırmasına bırakılmaktadır. Bu durum, potansiyelin doğru konumlandırılamamasına ve stratejik hatalara yol açabilmektedir.
+</p>
+
+<p>
+Global Pathway Coaching, bu belirsizliği ortadan kaldırmayı amaçlar.
+</p>
+
+<p>
+Vizyonumuz; öğrencinin akademik gelişimine ve kişisel ilerlemesine odaklanabileceği, süreç yönetiminin ise sistemli bir çerçeve içerisinde yürütüldüğü bir yapı sunmaktır. Bu modelde:
+</p>
+
+<ul>
+<li>Ülke ve bölüm seçimi rastgele değil, analiz temellidir.</li>
+<li>Üniversite gereklilikleri eksiksiz şekilde haritalandırılır.</li>
+<li>Başvuru takvimleri netleştirilir ve takip edilir.</li>
+<li>Sınav hazırlık süreci stratejik olarak planlanır.</li>
+<li>Proje ve extracurricular gelişim bilinçli şekilde yönlendirilir.</li>
+<li>Hiçbir önemli tarih gözden kaçmaz.</li>
+</ul>
+
+<p>
+Biz eğitim kurumu değiliz. Ders anlatmayız. Ancak sürecin stratejik mimarisini kurar ve haftalık birebir takip ile öğrencinin doğru yolda ilerlediğinden emin oluruz.
+</p>
+
+<p>
+Haftalık görüşmeler, yalnızca ilerleme kontrolü değil; aynı zamanda yön teyidi sağlar. Öğrenci “Acaba doğru mu yapıyorum?” ya da “Bir şeyi kaçırdım mı?” kaygısını yaşamaz. Sürecin her aşaması net, ölçülebilir ve planlıdır.
+</p>
+
+<p>
+Global Pathway Coaching’in temel yaklaşımı şudur: Başarı yalnızca çalışmakla değil, doğru planla çalışmakla mümkündür.
+</p>
+
+<p>
+Bu nedenle vizyonumuz, öğrencinin potansiyelini rastlantılara değil, sistemli ve disiplinli bir stratejiye dayandırmaktır. Yurt dışı üniversite yolculuğu bireysel bir mücadele değil; yapılandırılmış ve kontrollü bir ilerleme süreci olmalıdır.
+</p>
+
 </section>
 
 <section class="section" id="surec">
