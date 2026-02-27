@@ -216,7 +216,61 @@ padding:80px 6%;
 padding:40px 20px;
 }
 }
+.popup{
+display:none;
+position:fixed;
+z-index:9999;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+}
 
+.popup-content{
+background:white;
+width:90%;
+max-width:500px;
+margin:8% auto;
+padding:40px;
+border-radius:20px;
+position:relative;
+box-shadow:0 30px 80px rgba(0,0,0,0.3);
+}
+
+.popup-content h3{
+margin-top:0;
+text-align:center;
+}
+
+.popup-content input,
+.popup-content select{
+width:100%;
+padding:12px;
+margin:10px 0 20px 0;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:14px;
+}
+
+.submit-btn{
+width:100%;
+padding:14px;
+background:#c6a75e;
+border:none;
+color:white;
+border-radius:30px;
+font-size:15px;
+cursor:pointer;
+}
+
+.close{
+position:absolute;
+right:20px;
+top:15px;
+font-size:22px;
+cursor:pointer;
+}
 </style>
 </head>
 
@@ -235,7 +289,7 @@ padding:40px 20px;
 <section class="hero">
 <h2>Yurt Dışında Üniversite Yolculuğunuzda Akademik Rehberlik</h2>
 <p>Her adımı planlanmış, takip edilen ve ölçülen bir başvuru süreci.</p>
-<a href="#iletisim" class="button">Ön Görüşme Planla</a>
+<button class="button" onclick="openForm()">Ön Görüşme Planla</button>
 </section>
   <section class="section" id="surec">
 <div class="cards">
@@ -325,6 +379,53 @@ internationalstrategy@globalpathwaycoaching.com<br>
 <footer>
 © 2026 Global Pathway Coaching | Tüm Hakları Saklıdır
 </footer>
+<!-- Popup Form -->
+<div id="popupForm" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closeForm()">&times;</span>
+    <h3>Ön Görüşme Formu</h3>
 
+    <form action="https://formsubmit.co/internationalstrategy@globalpathwaycoaching.com" method="POST">
+      
+      <input type="hidden" name="_captcha" value="false">
+
+      <label>Ad Soyad</label>
+      <input type="text" name="isim" required>
+
+      <label>E-posta</label>
+      <input type="email" name="email" required>
+
+      <label>Telefon</label>
+      <input type="tel" name="telefon" required>
+
+      <label>İlgilenilen Ülke</label>
+      <select name="ulke" required>
+        <option value="">Seçiniz</option>
+        <option>Hollanda</option>
+        <option>İngiltere</option>
+        <option>Kanada</option>
+        <option>İtalya</option>
+      </select>
+
+      <button type="submit" class="submit-btn">Gönder</button>
+    </form>
+  </div>
+</div>
+  <script>
+function openForm(){
+document.getElementById("popupForm").style.display = "block";
+}
+
+function closeForm(){
+document.getElementById("popupForm").style.display = "none";
+}
+
+window.onclick = function(event) {
+  var popup = document.getElementById("popupForm");
+  if (event.target == popup) {
+    popup.style.display = "none";
+  }
+}
+</script>
 </body>
 </html>
